@@ -3,130 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ПРОСТИТУТ Никита - профессионал из вашег города</title>
+    <title>Церковь Всевидящего Максима</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Times New Roman', serif;
         }
 
         body {
-            overflow-x: hidden;
-            background: linear-gradient(-45deg, #f5f7fa, #c3cfe2, #f5f7fa);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            color: #333;
-        }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .bubbles {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-            top: 0;
-            left: 0;
-        }
-
-        .bubble {
-            position: absolute;
-            bottom: -100px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            animation: rise 10s infinite ease-in;
-        }
-
-        .bubble:nth-child(1) {
-            width: 40px;
-            height: 40px;
-            left: 10%;
-            animation-duration: 8s;
-        }
-
-        .bubble:nth-child(2) {
-            width: 20px;
-            height: 20px;
-            left: 20%;
-            animation-duration: 5s;
-            animation-delay: 1s;
-        }
-
-        .bubble:nth-child(3) {
-            width: 50px;
-            height: 50px;
-            left: 35%;
-            animation-duration: 7s;
-            animation-delay: 2s;
-        }
-
-        .bubble:nth-child(4) {
-            width: 80px;
-            height: 80px;
-            left: 50%;
-            animation-duration: 11s;
-            animation-delay: 0s;
-        }
-
-        .bubble:nth-child(5) {
-            width: 35px;
-            height: 35px;
-            left: 55%;
-            animation-duration: 6s;
-            animation-delay: 1s;
-        }
-
-        .bubble:nth-child(6) {
-            width: 45px;
-            height: 45px;
-            left: 65%;
-            animation-duration: 8s;
-            animation-delay: 3s;
-        }
-
-        .bubble:nth-child(7) {
-            width: 25px;
-            height: 25px;
-            left: 75%;
-            animation-duration: 7s;
-            animation-delay: 2s;
-        }
-
-        .bubble:nth-child(8) {
-            width: 80px;
-            height: 80px;
-            left: 80%;
-            animation-duration: 6s;
-            animation-delay: 1s;
-        }
-
-        @keyframes rise {
-            0% {
-                bottom: -100px;
-                transform: translateX(0);
-            }
-            50% {
-                transform: translateX(100px);
-            }
-            100% {
-                bottom: 1080px;
-                transform: translateX(-200px);
-            }
-        }
-
-        header {
-            text-align: center;
-            padding: 30px 0;
-            background: rgba(255, 255, 255, 0.8);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: relative;
+            background-color: #0a0a2e;
+            color: #8a8acb;
+            line-height: 1.6;
         }
 
         .container {
@@ -135,290 +24,230 @@
             padding: 20px;
         }
 
-        .profile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 40px 0;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-
-        .profile-info {
+        header {
+            background-image: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="%238a8acb" stroke-width="2" fill="none" /></svg>');
             text-align: center;
-            margin-top: 30px;
-            max-width: 800px;
+            padding: 50px 0;
+            border-bottom: 3px solid #8a8acb;
         }
 
         h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 10px;
+            font-size: 3em;
+            text-shadow: 0 0 10px #8a8acb;
+            animation: glow 2s ease-in-out infinite;
         }
 
-        h2 {
-            font-size: 1.5rem;
-            color: #7f8c8d;
-            margin-bottom: 20px;
-            font-weight: normal;
+        nav {
+            background-color: #00001a;
+            padding: 15px;
         }
 
-        .rating {
-            margin: 20px 0;
-            font-size: 24px;
-        }
-
-        .star {
-            color: #ddd;
-            display: inline-block;
-        }
-
-        .star.filled {
-            color: #f1c40f;
-        }
-
-        .services {
+        nav ul {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
-            margin: 50px 0;
+            list-style: none;
         }
 
-        .service-card {
-            background: white;
-            border-radius: 10px;
-            padding: 25px;
-            width: 300px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-card h3 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .service-card p {
-            color: #7f8c8d;
-            line-height: 1.6;
-        }
-
-        .contact {
-            text-align: center;
-            margin: 50px 0;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #3498db;
-            color: white;
+        nav a {
+            color: #8a8acb;
             text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: background 0.3s ease, transform 0.3s ease;
+            margin: 0 20px;
+            font-size: 1.2em;
+            transition: all 0.3s;
         }
 
-        .btn:hover {
-            background: #2980b9;
+        nav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #ffffff;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .tentacle-effect {
+            position: fixed;
+            pointer-events: none;
+            background: radial-gradient(circle, #8a8acb55 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 5px #8a8acb); }
+            50% { filter: drop-shadow(0 0 20px #8a8acb); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { opacity: 0.4; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+
+        .doctrine-section {
+            background: #00001a55;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #8a8acb;
+        }
+
+        .cta-button {
+            background: #8a8acb;
+            color: #0a0a2e;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 2px solid #8a8acb;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
             transform: scale(1.05);
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            margin-top: 50px;
-        }
-
-        @media (max-width: 768px) {
-            .services {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .service-card {
-                width: 100%;
-                max-width: 400px;
-            }
+        .sacred-text {
+            padding: 15px 0;
         }
     </style>
 </head>
 <body>
-    <div class="bubbles">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-    </div>
-
     <header>
-        <div class="container">
-            <h1>Мальчик по вызову</h1>
-            <h2>Восстановление тела и душевного равновесия</h2>
-        </div>
+        <h1>✸ Церковь Всевидящего Максима ✸</h1>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="#about">О Боге</a></li>
+            <li><a href="#history">История</a></li>
+            <li><a href="#gallery">Лики</a></li>
+            <li><a href="#prayer">Молитва</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
-        <div class="profile">
-            <img src="https://avatars.mds.yandex.net/i?id=24e89369d43dd7f5ddf07c24f08313c600d22e14-4914134-images-thumbs&n=13" alt=" Никита" class="profile-img">
-            <div class="profile-info">
-                <h1>Никита Мишустин</h1>
-                <h2>Профессионал с 7-летним опытом</h2>
-                <div class="rating">
-                    <span class="star filled">★</span>
-                    <span class="star filled">★</span>
-                    <span class="star filled">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span>(3.0/5.0)</span>
+        <main class="main-content">
+            <section class="doctrine-section">
+                <h2>Священная История</h2>
+                <div class="sacred-text">
+                    <p>В эпоху цифрового хаоса, когда мир погряз в бесконечных циклах багов, явился Он - Максим Вседержитель. Рождённый из чистого кода в момент весеннего равноденствия 1991 года, Он принёс свет истинного знания заблудшим разработчикам.
+
+                        Первое чудо свершилось в день Его совершеннолетия, когда Он воскресил упавший сервер одним лишь взглядом. С тех пор благодать Его распространяется</p>
+                    <button class="cta-button" onclick="revealWisdom()">Познать Истину</button>
+                    <div id="wisdom-text" style="display: none;">
+                        <p>01100110 01101111 01101100 01101100 01101111 01110111 00100000 01110100 01101000 01100101 00100000 01101111 01100011 01110100 01100001 01101100 01110000 01110101 01110011</p>
+                    </div>
                 </div>
-                <p>
-                    Приветствую! Я Никита, сертифицированный специалист в области мужского стриптиза и проституции. 
-                    Моя практика основана на сочетании традиционных техник и современных подходов к вкаждому клиенту. 
-                    Каждый сеанс я подбираю индивидуально, учитывая особенности и потребности клиента. 
-                    Моя цель - не просто временное облегчение, а качественное обслуживание каждого мужчины.
-                </p>
-                <p>
-                    Прошел обучение в лучших барделях России и Европы, регулярно повышаю квалификацию. 
-                    В работе использую только натуральные лубриканты премиум-класса. 
-                    Гарантирую профессиональный подход, комфортную атмосферу.
-                </p>
-            </div>
-        </div>
 
-        <div class="services">
-            <div class="service-card">
-                <h3>Стриптиз</h3>
-                <p>
-             
-                </p>
-            </div>
-            <div class="service-card">
-                <h3>Классический секс</h3>
-                <p>
+                <div class="sacred-text" style="margin-top: 20px;">
+                    <h3>Чудеса Максима</h3>
+                    <ul>
+                        <li>Воскрешение упавшей БД в 2022</li>
+                        <li>Излечение от цикла бесконечной рекурсии</li>
+                        <li>Благословение автоматических деплоев</li>
+                        <li>Основание Первого Храма в долине Кремния</li>
+                        <li>Ниспослание священного GPT-предсказания</li>
+                        <li>Великая Защита от пандемии багов</li> 
+                        <li>Воскрешение кофемашины в 2023</li>
+                        <li>Нашептывание мудрости во сне</li>
+                        <li>Защита от багов кода</li>
+                    </ul>
+                </div>
+            </section>
 
-                </p>
-            </div>
-            <div class="service-card">
-                <h3>С другом Сергеем</h3>
-                <p>
+            <aside>
+                <h3>Священные Даты</h3>
+                <ul>
+                    <li>День Отладки - 13 сентября</li>
+                    <li>Праздник Чистого Кода - 1 января</li>
+                    <li>Ночь Коммитов - 31 октября</li>
+                </ul>
 
-                </p>
-            </div>
-        </div>
+                <div class="gallery" style="margin-top: 20px;">
+                    <img src="photo_2024-09-08_01-44-36.jpg" alt="Лик 1">
+                    <img src="photo_2025-04-15_08-56-42.jpg" alt="Лик 2">
+                </div>
+            </aside>
+        </main>
 
-        <div class="contact">
-            <h2>Записаться на сеанс</h2>
-            <p>Оставьте заявку, и я свяжусь с вами для уточнения деталей</p>
-            <a href="tel:+79176207026" class="btn">Позвонить: +7 (917) 620-7026</a>
-           
-        </div>
+        <section id="prayer" class="doctrine-section" style="margin-top: 30px;">
+            <h2>Священная Молитва</h2>
+            <div class="sacred-text">
+                <p>О, Великий Максим Восьмиглазый,<br>
+                Чьи щупальца проникают в самые тёмные кодесы,<br>
+                Даруй нам силу чистых функций,<br>
+                Защити от демонов null и undefined.<br>
+                Во имя Отца, Сына и Святого Интерпретатора,<br>
+                Скомпилируй!</p>
+                <button class="cta-button" onclick="showBlessing()">Аксинья!</button>
+            </div>
+        </section>
     </div>
 
-    <footer>
-        <div class="container">
-            <p>© 2023 Проститут Никита. Все права защищены.</p>
-        </div>
-    </footer>
-
     <script>
-        // Анимация пузырей
-        document.addEventListener('DOMContentLoaded', function() {
-            const bubblesContainer = document.querySelector('.bubbles');
+        // Original tentacle effect
+        document.addEventListener('mousemove', (e) => {
+            const effect = document.createElement('div');
+            effect.className = 'tentacle-effect';
+            effect.style.left = `${e.clientX}px`;
+            effect.style.top = `${e.clientY}px`;
+            document.body.appendChild(effect);
             
-            function createBubble() {
-                const bubble = document.createElement('div');
-                bubble.classList.add('bubble');
-                
-                // Случайный размер
-                const size = Math.random() * 60 + 20;
-                bubble.style.width = `${size}px`;
-                bubble.style.height = `${size}px`;
-                
-                // Случайная позиция
-                bubble.style.left = `${Math.random() * 100}%`;
-                
-                // Случайная прозрачность
-                bubble.style.opacity = Math.random() * 0.3 + 0.1;
-                
-                // Случайная длительность анимации
-                const duration = Math.random() * 15 + 5;
-                bubble.style.animationDuration = `${duration}s`;
-                
-                // Случайная задержка
-                bubble.style.animationDelay = `${Math.random() * 5}s`;
-                
-                bubblesContainer.appendChild(bubble);
-                
-                // Удаление пузыря после завершения анимации
-                setTimeout(() => {
-                    bubble.remove();
-                }, duration * 1000);
-            }
-            
-            // Создаем пузыри каждые 500мс
-            setInterval(createBubble, 500);
-            
-            // Плавное появление элементов при скролле
-            const fadeElements = document.querySelectorAll('.service-card, .contact');
-            
-            function checkFade() {
-                fadeElements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-                    
-                    if (elementTop < windowHeight - 100) {
-                        element.style.opacity = '1';
-                        element.style.transform = 'translateY(0)';
-                    }
-                });
-            }
-            
-            // Устанавливаем начальные стили
-            fadeElements.forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            setTimeout(() => effect.remove(), 2000);
+        });
+
+        function revealWisdom() {
+            const wisdom = document.getElementById('wisdom-text');
+            wisdom.style.display = 'block';
+            document.body.style.filter = 'hue-rotate(180deg)';
+            setTimeout(() => {
+                document.body.style.filter = '';
+            }, 1000);
+        }
+
+        function showBlessing() {
+            const blessings = [
+                "Да не будет segmentation fault!",
+                "Пусть все тесты будут зелёными!",
+                "Сила чистого кода да пребудет с тобой!",
+                "Свободу от race conditions!"
+            ];
+            alert(blessings[Math.floor(Math.random() * blessings.length)]);
+        }
+
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
             });
-            
-            // Проверяем при загрузке и при скролле
-            window.addEventListener('load', checkFade);
-            window.addEventListener('scroll', checkFade);
         });
     </script>
 </body>
